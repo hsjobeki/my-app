@@ -11,6 +11,9 @@
 # production
 /build
 
+#nix
+result
+
 # misc
 .DS_Store
 .env.local
