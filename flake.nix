@@ -5,11 +5,11 @@
   outputs = {
     self,
     dream2nix,
-    theme
   } @ inp:
     dream2nix.lib.makeFlakeOutputs {
       source = ./.;      
       config.projectRoot = ./.;
+      systemsFromFile = ./nix_systems;
       packageOverrides = {
         "@example/core" = {
           add-nix-build = {
