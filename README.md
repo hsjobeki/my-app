@@ -1,24 +1,22 @@
-# Demo: Create React App with Dream2nix
+# Demo: simple Create React App with Dream2nix
 
-This repository can be reproduced by yourself with the steps described below or you can simply clone and extend it for reuse of your own.
+Installed as dependency:
 
-## How to use the nix commands
+`"@example/core": "github:hsjobeki/example-library-core"`
 
-### Prerequisites
+App.tsx:
+```jsx
+import React from "react";
+import "./App.css";
+import { sayHello } from "@example/core"; //Cannot find module '@example/core' or its corresponding type declarations. 
 
-### Common Commands
+function App() {
+  return (
+    <div className="App">
+      <button onClick={() => sayHello("Mike")}>Say it</button>
+    </div>
+  );
+}
 
-start developing
-
-```sh
-nix develop
+export default App;
 ```
-
-build the app
-
-```sh
-nix build .#my-app
-```
-
-
-## How to Reproduce this repository
